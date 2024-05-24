@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB-HEX CONVERTER</title>
+    <link rel="stylesheet" href="./botssrap.css">
+    <link rel="icon" href="clr.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .cardd {
+            width: 600px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .affiche {
+            display: none;
+        }
+        
+        #red, #green, #blue {
+            border-radius: 9px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #red {
+            border: 2px solid red;
+        }
+
+        #red::placeholder {
+            color: red;
+        }
+
+        #green {
+            border: 2px solid green;
+        }
+
+        #green::placeholder {
+            color: green;
+        }
+
+        #blue {
+            border: 2px solid blue;
+        }
+
+        #blue::placeholder {
+            color: blue;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease-in-out;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            background-color: #0056b3;
+        }
+
+        input[type="text"][readonly] {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+
+        #error {
+            color: red;
+            font-style: italic;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #base {
+            display: flex;
+            gap: 16px;
+        }
+
+        #base img {
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .cardd {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            input[type="text"] {
+                width: calc(100% - 20px);
+                font-size: 14px;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body id="body" style="font-family: 'Arial', sans-serif; font-weight: normal;">
+    <header style="background-color: #007bff; color: white; padding: 20px; text-align: center; font-size: 24px;">
+        <h1>RGB-HEXA Color Converter</h1>
+    </header>
+        
+    <div id="row" class="row cardd" style="font-size: 16px;">
+        <div id="base" style="align-items: center;">
+            <img src="clr.png" alt="" style="height: 60px; width: 60px;">
+            <h2 style="margin-left: 10px;"> RGB-HEXA Converter</h2>
+        </div>
+        <div class="col my-3">
+            <label for="red" style="font-weight: bold;">Enter a value for the red dimension:</label>
+            <input name="red" class="form-control" type="text" id="red" placeholder="RED">
+        </div><br>
+        <div class="col my-3">
+            <label for="green" style="font-weight: bold;">Enter a value for the green dimension:</label>
+            <input name="green" class="form-control" type="text" id="green" placeholder="GREEN">
+        </div><br>
+        <div class="col my-3">
+            <label for="blue" style="font-weight: bold;">Enter a value for the blue dimension:</label>
+            <input name="blue" class="form-control" type="text" id="blue" placeholder="BLUE">
+        </div><br>
+        <div class="row my-3 mx-1">
+            <button type="button" class="btn btn-primary btn-lg" onclick="get()" style="font-weight: bold;">CONVERT</button>
+        </div>
+        <div class="col my-3">
+            <input class="form-control" type="text" id="rgb" placeholder="RRGGBB" readonly>
+        </div>
+        <div id="error" style="font-size: 18px;"></div>
+    </div>
+</body>
+
+    <script src="./bootstarp.js"></script>
+    <script src="./rgbhexa.js"></script>
+</body>
+<footer style="text-align: center; padding: 20px; background-color: #f8f9fa; margin-top: 20px; font-size: 16px;">
+    <p>&copy; 2024 RGB-HEXA Converter. All rights reserved.</p>
+    <div style="color: #333; font-size: 14px; font-family: 'Arial', sans-serif; text-align: center;">
+        <p>Developed by <a href="https://yourwebsite.com" style="color: #007bff; text-decoration: none;">Bouazizi Ayman</a></p>
+        <p>Follow us on <a href="https://Instagram.com/" style="color: #1DA1F2; text-decoration: none;">Instagram</a> | <a href="https://Github.com/" style="color: #4267B2; text-decoration: none;">Github</a></p>
+    </div>
+</footer>
+
+
+
+</html>
